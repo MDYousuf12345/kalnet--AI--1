@@ -1,0 +1,272 @@
+@import "tailwindcss";
+
+/* =========================================
+   ROOT
+========================================= */
+
+:root {
+
+  --background:
+    #F4F7FB;
+
+  --foreground:
+    #0F172A;
+}
+
+/* =========================================
+   HTML
+========================================= */
+
+html {
+
+  scroll-behavior:
+    smooth;
+}
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+  min-height:
+    100vh;
+
+  background:
+    linear-gradient(
+      to bottom right,
+      #F8FAFC,
+      #EEF2FF
+    );
+
+  color:
+    var(--foreground);
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  overflow-x:
+    hidden;
+
+  -webkit-font-smoothing:
+    antialiased;
+
+  -moz-osx-font-smoothing:
+    grayscale;
+}
+
+/* =========================================
+   GLOBAL TRANSITIONS
+========================================= */
+
+* {
+
+  box-sizing:
+    border-box;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+
+  transition:
+    all 0.25s ease;
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+
+  width:
+    10px;
+
+  height:
+    10px;
+}
+
+::-webkit-scrollbar-track {
+
+  background:
+    transparent;
+}
+
+::-webkit-scrollbar-thumb {
+
+  background:
+    linear-gradient(
+      to bottom,
+      #C4B5FD,
+      #A78BFA
+    );
+
+  border-radius:
+    999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+  background:
+    linear-gradient(
+      to bottom,
+      #A78BFA,
+      #8B5CF6
+    );
+}
+
+/* =========================================
+   DASHBOARD CARD
+========================================= */
+
+.dashboard-card {
+
+  background:
+    rgba(255,255,255,0.92);
+
+  backdrop-filter:
+    blur(20px);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 10px 40px rgba(15,23,42,0.06);
+
+  transition:
+    all 0.3s ease;
+}
+
+.dashboard-card:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 20px 50px rgba(15,23,42,0.08);
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.primary-btn {
+
+  background:
+    linear-gradient(
+      to right,
+      #7C3AED,
+      #9333EA
+    );
+
+  color:
+    white;
+
+  border-radius:
+    18px;
+
+  padding:
+    14px 28px;
+
+  font-weight:
+    600;
+
+  box-shadow:
+    0 12px 30px rgba(124,58,237,0.25);
+}
+
+.primary-btn:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 18px 35px rgba(124,58,237,0.35);
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+
+input,
+textarea {
+
+  font-family:
+    inherit;
+}
+
+/* REMOVE BLUE OUTLINE */
+
+input:focus,
+textarea:focus,
+button:focus {
+
+  outline:
+    none;
+}
+
+/* =========================================
+   GLASS EFFECT
+========================================= */
+
+.glass {
+
+  background:
+    rgba(255,255,255,0.65);
+
+  backdrop-filter:
+    blur(20px);
+
+  border:
+    1px solid rgba(255,255,255,0.5);
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+.fade-in {
+
+  animation:
+    fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      translateY(10px);
+  }
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+
+  background:
+    #8B5CF6;
+
+  color:
+    white;
+}
